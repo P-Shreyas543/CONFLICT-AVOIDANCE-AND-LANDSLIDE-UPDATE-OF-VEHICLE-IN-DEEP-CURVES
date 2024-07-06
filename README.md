@@ -4,7 +4,7 @@
 Landslides are hazardous geographical processes that cause damage to civil infrastructure and property, and can result in loss of life. This project aims to develop a system to reduce the number of accidents on curved roadways due to landslides and vehicle conflicts.
 
 ## Project Overview
-The system uses a combination of vibration and rain sensors to detect landslide conditions and heavy rainfall. When such conditions are detected, gates on either side of the ghat road close until the conditions normalize. Additionally, ultrasonic sensors detect vehicles approaching from the opposite side of a curve and warn drivers via an LCD display.
+The system uses a combination of vibration and rain sensors to detect landslide conditions and heavy rainfall. When such conditions are detected, gates on either side of the ghat road close until the conditions normalize. Additionally, ultrasonic sensors detect vehicles approaching from the opposite side of a curve and warn drivers via an LCD display through ESP-NOW protocol wirelessly.
 
 ## Objectives
 - To decrease the number of accidents on curved roadways.
