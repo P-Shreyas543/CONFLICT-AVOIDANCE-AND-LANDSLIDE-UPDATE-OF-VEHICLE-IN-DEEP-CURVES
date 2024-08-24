@@ -83,12 +83,22 @@ The system is composed of:
    - Load `slave.ino` onto the receiver ESP-32.
 
 2. **Power Up**:
+   - Connect both ESP-32 units to a power source.## Usage Instructions
+
+1. **Upload Code**:
+   - Load `master.ino` onto the transmitter ESP-32.
+   - Load `slave.ino` onto the receiver ESP-32.
+
+2. **Update MAC Address**:
+   - In the `master.ino` file, replace `broadcastAddress1[]` with the MAC address of the receiver ESP-32.
+
+3. **Power Up**:
    - Connect both ESP-32 units to a power source.
 
-3. **Verify Communication**:
+4. **Verify Communication**:
    - Ensure that the transmitter ESP-32 is properly sending data and that the receiver ESP-32 is displaying the received information on the LCD.
 
-4. **Calibration**:
+5. **Calibration**:
    - Adjust sensor thresholds as necessary for your specific application and environment.
 
 ### Applications
