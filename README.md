@@ -1,39 +1,95 @@
-# Conflict Avoidance and Landslide Update of Vehicle in Deep Curves
+# Conflict Avoidance and Landslide Update of Vehicles in Deep Curves
 
 ## Introduction
-Landslides are hazardous geographical processes that cause damage to civil infrastructure and property, and can result in loss of life. This project aims to develop a system to reduce the number of accidents on curved roadways due to landslides and vehicle conflicts.
+Landslides and vehicle conflicts on curved roadways can lead to severe accidents and infrastructure damage. This project aims to develop a safety system designed to mitigate such risks by using sensor technology to detect hazardous conditions and warn drivers accordingly.
 
 ## Project Overview
-The system uses a combination of vibration and rain sensors to detect landslide conditions and heavy rainfall. When such conditions are detected, gates on either side of the ghat road close until the conditions normalize. Additionally, ultrasonic sensors detect vehicles approaching from the opposite side of a curve and warn drivers via an LCD display through ESP-NOW protocol wirelessly.
+The system integrates vibration and rain sensors to monitor landslide conditions and heavy rainfall. In the event of hazardous conditions, gates on either side of the road close until conditions normalize. Additionally, ultrasonic sensors detect vehicles approaching from the opposite side of a curve, and warnings are displayed on an LCD through a wireless communication protocol (ESP-NOW).
 
 ## Objectives
-- To decrease the number of accidents on curved roadways.
-- To implement a warning system for vehicles approaching from opposite directions.
-- To use vibration and rain sensors for detecting landslide conditions and heavy rainfall.
+- Reduce the number of accidents on curved roadways.
+- Implement a vehicle warning system for oncoming traffic.
+- Utilize vibration and rain sensors to detect landslides and heavy rainfall.
 
 ## Methodology
-The system consists of:
-- Vibration sensors to detect landslides.
-- Rain sensors to detect heavy rainfall.
-- Ultrasonic sensors connected to an ESP-32 microcontroller to detect approaching vehicles.
-- LCD displays to warn drivers of approaching vehicles and hazardous conditions throug ESP-NOW communication protocol.
+The system is composed of:
+- **Vibration Sensors:** Detect landslides.
+- **Rain Sensors:** Monitor heavy rainfall.
+- **Ultrasonic Sensors:** Measure vehicle distance.
+- **ESP-32 Microcontroller:** Manages sensor data and wireless communication.
+- **LCD Display:** Provides visual warnings to drivers.
+- **Gates:** Automatically block the road when hazardous conditions are detected.
+
+### Wireless Communication Protocol
+**ESP-NOW** is a low-power, peer-to-peer wireless communication protocol developed by Espressif. It allows devices to communicate with each other without requiring a Wi-Fi network. ESP-NOW enables efficient, low-latency, and reliable communication between multiple ESP32 devices.
 
 ## Hardware Requirements
 - Vibration Sensors
 - Rain Sensors
 - Ultrasonic Sensors
-- ESP-32 Microcontroller
+- ESP-32 Microcontroller (two units: one for the transmitter, one for the receiver)
 - LCD Display
 - Gates for blocking the road
 
 ## Software Requirements
 - Arduino IDE for programming the ESP-32
-- Libraries for interfacing sensors and display
+- Libraries for interfacing with sensors and displays
 
-## Wireless communication protocol
-- ESP-NOW
+## Connections
 
-## Results and Discussions
+### Master (Transmitter) ESP-32
+1. **Vibration Sensor**: 
+   - **Signal Pin** to **GPIO 4**
+   - **VCC** to **3.3V**
+   - **GND** to **GND**
+
+2. **Rain Sensor**:
+   - **Signal Pin** to **GPIO 34**
+   - **VCC** to **3.3V**
+   - **GND** to **GND**
+
+3. **Ultrasonic Sensor 1**:
+   - **Trig Pin** to **GPIO 5**
+   - **Echo Pin** to **GPIO 18**
+   - **VCC** to **5V**
+   - **GND** to **GND**
+
+4. **Ultrasonic Sensor 2**:
+   - **Trig Pin** to **GPIO 21**
+   - **Echo Pin** to **GPIO 19**
+   - **VCC** to **5V**
+   - **GND** to **GND**
+
+### Slave (Receiver) ESP-32
+1. **LCD Display**:
+   - **SDA** to **GPIO 21**
+   - **SCL** to **GPIO 22**
+   - **VCC** to **3.3V**
+   - **GND** to **GND**
+
+2. **Buzzer**:
+   - **Pin** to **GPIO 4**
+   - **VCC** to **3.3V** (or **5V** depending on the buzzer)
+   - **GND** to **GND**
+
+3. **Pushbutton (Clear Pin)**:
+   - **One Pin** to **GPIO 2**
+   - **Other Pin** to **GND**
+
+## Usage Instructions
+
+1. **Upload Code**:
+   - Load `master.ino` onto the transmitter ESP-32.
+   - Load `slave.ino` onto the receiver ESP-32.
+
+2. **Power Up**:
+   - Connect both ESP-32 units to a power source.
+
+3. **Verify Communication**:
+   - Ensure that the transmitter ESP-32 is properly sending data and that the receiver ESP-32 is displaying the received information on the LCD.
+
+4. **Calibration**:
+   - Adjust sensor thresholds as necessary for your specific application and environment.
 
 ### Applications
 - Road safety enhancement on curved roadways.
@@ -52,4 +108,4 @@ The system consists of:
 - Enhanced prediction models for landslide and weather conditions.
 
 ## Conclusion
-This project successfully demonstrates a system to enhance road safety on curved roadways by using sensors to detect hazardous conditions and warn drivers.
+This project successfully demonstrates a system to enhance road safety on curved roadways by using sensors to detect hazardous conditions and warn drivers. The use of ESP-NOW protocol allows for efficient wireless communication between the transmitter and receiver ESP-32 units, providing timely and accurate information to improve road safety.
