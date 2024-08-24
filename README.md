@@ -104,18 +104,3 @@ The system is composed of:
 ### Applications
 - Road safety enhancement on curved roadways.
 - Landslide monitoring and warning system.
-
-### Advantages
-- Real-time warning system for drivers.
-- Automated response to hazardous conditions.
-
-### Limitations
-- Dependent on sensor accuracy and reliability.
-- Requires maintenance and periodic testing.
-
-### Future Scope
-- Integration with a centralized traffic management system.
-- Enhanced prediction models for landslide and weather conditions.
-
-## Conclusion
-This project successfully demonstrates a system to enhance road safety on curved roadways by using sensors to detect hazardous conditions and warn drivers. The use of ESP-NOW protocol allows for efficient wireless communication between the transmitter and receiver ESP-32 units, providing timely and accurate information to improve road safety.
