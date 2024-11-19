@@ -111,12 +111,15 @@ The system operates in two primary roles:
   - Displays "Waiting for connection" on the LCD.
   - Disables the buzzer to conserve power.
  
+---
+ 
 ## Project Images
 <div align="center">
   <img src="https://github.com/user-attachments/assets/692ccf32-b058-4ddf-8323-9f54764f712d" alt="Image 3" width="30%" />
   <img src="https://github.com/user-attachments/assets/b2f93b1d-e695-46d5-8757-a363d183c3f4" alt="Image 2" width="30%" />
   <img src="https://github.com/user-attachments/assets/ca3b9c91-4273-432d-8a6f-7f55d11207bb" alt="Image 1" width="30%" />
 </div>
+
 ---
 
 ## Applications
