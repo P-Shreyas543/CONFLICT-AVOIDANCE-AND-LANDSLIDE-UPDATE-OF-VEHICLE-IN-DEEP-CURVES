@@ -1,5 +1,12 @@
 # Conflict Avoidance and Landslide Update of Vehicles in Deep Curves
 
+## Project Images
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/ca3b9c91-4273-432d-8a6f-7f55d11207bb" alt="Image 1" width="30%" />
+  <img src="https://github.com/user-attachments/assets/b2f93b1d-e695-46d5-8757-a363d183c3f4" alt="Image 2" width="30%" />
+  <img src="https://github.com/user-attachments/assets/692ccf32-b058-4ddf-8323-9f54764f712d" alt="Image 3" width="30%" />
+</div>
+
 ## Introduction
 Landslides and vehicle conflicts on curved roadways pose significant risks to drivers and infrastructure. This project aims to create a safety system that detects hazardous conditions, including landslides, rainfall, and vehicle proximity, and warns drivers to prevent accidents.
 
